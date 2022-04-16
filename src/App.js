@@ -2,7 +2,7 @@ import './App.css';
 import AllMeetUpsPage from './pages/AllMeetUps';
 import NewMeetUpPage from './pages/NewMeetUp';
 import FavouritesPage from './pages/Favourites';
-import MainNavigation from './components/layout/MainNavigation';
+import Layout from './components/layout/Layout';
 import {  BrowserRouter as Router,
 
  
@@ -13,8 +13,7 @@ import {  BrowserRouter as Router,
 function App() {
 
   return (
-    <div>
-    <MainNavigation />
+    <Layout>
     <Routes>
     <Route path='/' exact element = {<AllMeetUpsPage />}/>
     <Route path='/favourites' element = {<FavouritesPage />}/>
@@ -22,7 +21,7 @@ function App() {
     </Routes>
 
 
-    </div> 
+    </Layout> 
   );
 }
 
